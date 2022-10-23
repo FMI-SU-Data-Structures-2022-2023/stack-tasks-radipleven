@@ -3,7 +3,13 @@
 using namespace std;
 
 int task1( int number ) {
-  return 0;
+  int result = 1;
+  for (int i = 0; i < number; i++)
+  {
+    result *= number;
+    number--;
+  }
+  return result;
 }
 
 bool task2 (const string& list) {
