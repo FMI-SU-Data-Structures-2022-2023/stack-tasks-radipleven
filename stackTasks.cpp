@@ -3,13 +3,21 @@
 using namespace std;
 
 int task1( int number ) {
-  int result = 1; //test solution, changes need to be made, implement stack
+  int result = number; //test solution, changes need to be made, implement stack
+  int final =1;
+  stack <int> numbers;
   for (int i = 0; i < number; i++)
   {
-    result *= number;
-    number--;
+    numbers.push(result--);
   }
-  return result;
+  for (int i = 0; i < number; i++)
+  {
+    int a =numbers.top();
+    final *=a;
+    numbers.pop();
+  }
+  
+  return final;
 }
 
 bool task2 (const string& list) {
