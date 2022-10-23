@@ -45,9 +45,6 @@ bool task2 (const string& list) {
       res = true;
     }
     }
-    
-    
-    
     return res;
 }
 
