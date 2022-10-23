@@ -21,7 +21,34 @@ int task1( int number ) {
 }
 
 bool task2 (const string& list) {
-    return false;
+    stack <char> phrase;
+    bool res = false;
+    for (int i = 0; i < list.size(); i++)
+    {
+        phrase.push(list[i]);
+    }
+    for (int i = 0; i < phrase.size(); i++)
+    {
+      char sym1 = phrase.top();
+    phrase.pop();
+    char sym2 =phrase.top();
+    phrase.pop();
+
+    if (sym1==')' && sym2=='(')
+    {
+      res = true;
+    }else if (sym1==']' && sym2=='[')
+    {
+      res = true;
+    }else if (sym1=='}' && sym2=='{')
+    {
+      res = true;
+    }
+    }
+    
+    
+    
+    return res;
 }
 
 bool task3(const vector<vector<int>>& g, unsigned from, unsigned to) {
