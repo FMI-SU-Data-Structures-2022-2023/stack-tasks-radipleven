@@ -3,7 +3,7 @@
 using namespace std;
 
 int task1( int number ) {
-  int result = 1;
+  int result = 1; //test solution, changes need to be made, implement stack
   for (int i = 0; i < number; i++)
   {
     result *= number;
