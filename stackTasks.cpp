@@ -50,7 +50,23 @@ bool task2 (const string& list) {
 }
 
 bool task3(const vector<vector<int>>& g, unsigned from, unsigned to) {
-	return false;
+    vector<bool> visited(g.size(), false);
+    stack<int> s;
+    s.push(from);
+    while (!s.empty()) {
+        int node = s.top();
+        s.pop();
+        if (node == to) return true;
+        if (visited[node]) continue;
+        visited[node] = true;
+        for (int i = g[node].size() - 1; i >= 0; i--) {
+            int next = g[node][i];
+            if (!visited[next]) {
+                s.push(next);
+            }
+        }
+    }
+    return false;
 }
 
 string task4 (const string& input) {
